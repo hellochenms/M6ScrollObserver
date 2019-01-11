@@ -1,20 +1,21 @@
 //
-//  M6YProgressScrollObserver.m
+//  M6XIndexScrollObserver.m
 //  M6ScrollObserver
 //
-//  Created by Chen,Meisong on 2019/1/10.
+//  Created by Chen,Meisong on 2019/1/11.
 //  Copyright © 2019年 xyz.chenms. All rights reserved.
 //
 
-#import "M6YProgressScrollObserver.h"
+#import "M6XIndexScrollObserver.h"
 
 static NSString * const kKeyPathContentOffset = @"contentOffset";
 
-@interface M6YProgressScrollObserver ()
+@interface M6XIndexScrollObserver ()
 @property (nonatomic) UIScrollView *scrollView;
 @end
 
-@implementation M6YProgressScrollObserver
+@implementation M6XIndexScrollObserver
+
 - (void)attachToScrollView:(UIScrollView * _Nullable)scrollView {
     // detach
     if (self.scrollView) {
@@ -48,24 +49,22 @@ static NSString * const kKeyPathContentOffset = @"contentOffset";
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:kKeyPathContentOffset]) {
         CGPoint offset = [[change objectForKey:NSKeyValueChangeNewKey] CGPointValue];
-        CGFloat progress = [self progressWithOffsetY:offset.y];
+        NSInteger index = [self indexWithOffsetX:offset.x];
         if (self.callback) {
-            self.callback(progress);
+            self.callback(index);
         }
     }
 }
 
-- (CGFloat)progressWithOffsetY:(CGFloat)offsetY {
-    CGFloat progress = 0;
-    if (offsetY < self.progress0OffsetY) {
-        progress = 0;
-    } else if (offsetY > self.progress1OffsetY) {
-        progress = 1.0;
-    } else {
-        progress = (offsetY - self.progress0OffsetY) / (self.progress1OffsetY - self.progress0OffsetY);
+- (NSInteger)indexWithOffsetX:(CGFloat)offsetX {
+    if (self.pageWidth <= 0) {
+        return 0;
     }
     
-    return progress;
+    NSInteger index = (NSInteger)(round(offsetX / self.pageWidth));
+    
+    return index;
 }
+
 
 @end

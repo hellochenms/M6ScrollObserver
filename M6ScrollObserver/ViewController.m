@@ -10,6 +10,7 @@
 #import "M4TempListGenerator.h"
 #import "M6OffsetScrollObserver.h"
 #import "M6YProgressScrollObserver.h"
+#import "M6RisePercentScrollObserver.h"
 
 static NSString * const kCellIdentifier = @"kCellIdentifier";
 
@@ -18,6 +19,7 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
 @property (nonatomic) NSArray<NSString *> *datas;
 @property (nonatomic) M6OffsetScrollObserver *offsetScrollObserver;
 @property (nonatomic) M6YProgressScrollObserver * yProgressScrollObserver;
+@property (nonatomic) M6RisePercentScrollObserver * yRisePercentScrollObserver;
 @property (nonatomic) UIView *someView;
 @end
 
@@ -28,7 +30,7 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
     
     // Do any additional setup after loading the view, typically from a nib.
     [self.view addSubview:self.tableView];
-    [self.yProgressScrollObserver attachToScrollView:self.tableView];
+    [self.yRisePercentScrollObserver attachToScrollView:self.tableView];
     
     [self.view addSubview:self.someView];
 }
@@ -59,7 +61,7 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
 
 #pragma mark - Life Cycle
 - (void)dealloc {
-    [self.yProgressScrollObserver detach];
+    [self.yRisePercentScrollObserver detach];
 }
 
 #pragma mark - Getter
@@ -120,5 +122,25 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
     }
 
     return _yProgressScrollObserver;
+}
+- (M6RisePercentScrollObserver *)yRisePercentScrollObserver {
+    if(!_yRisePercentScrollObserver){
+        _yRisePercentScrollObserver = [M6RisePercentScrollObserver new];
+        _yRisePercentScrollObserver.distance = 200;
+        __weak typeof(self) weakSelf = self;
+        _yRisePercentScrollObserver.callback = ^(CGFloat risePercent) {
+            CGRect someViewFrame = weakSelf.someView.frame;
+            CGFloat y = someViewFrame.origin.y + 200 * risePercent;
+            if (y < 0) {
+                y = 0;
+            } else if (y > 200) {
+                y = 200;
+            }
+            someViewFrame.origin.y = y;
+            weakSelf.someView.frame = someViewFrame;
+        };
+    }
+
+    return _yRisePercentScrollObserver;
 }
 @end

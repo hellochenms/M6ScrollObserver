@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9914784021E87CE50013BEEF /* M6XIndexScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9914783F21E87CE50013BEEF /* M6XIndexScrollObserver.m */; };
+		9914784B21E893EC0013BEEF /* M6RisePercentScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9914784A21E893EC0013BEEF /* M6RisePercentScrollObserver.m */; };
 		995E50A821E727A200C3DB28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E50A721E727A200C3DB28 /* AppDelegate.m */; };
 		995E50AB21E727A200C3DB28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E50AA21E727A200C3DB28 /* ViewController.m */; };
 		995E50AE21E727A200C3DB28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 995E50AC21E727A200C3DB28 /* Main.storyboard */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9914783E21E87CE50013BEEF /* M6XIndexScrollObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M6XIndexScrollObserver.h; sourceTree = "<group>"; };
+		9914783F21E87CE50013BEEF /* M6XIndexScrollObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M6XIndexScrollObserver.m; sourceTree = "<group>"; };
+		9914784921E893EC0013BEEF /* M6RisePercentScrollObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M6RisePercentScrollObserver.h; sourceTree = "<group>"; };
+		9914784A21E893EC0013BEEF /* M6RisePercentScrollObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M6RisePercentScrollObserver.m; sourceTree = "<group>"; };
 		995E50A321E727A200C3DB28 /* M6ScrollObserver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M6ScrollObserver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		995E50A621E727A200C3DB28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		995E50A721E727A200C3DB28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -48,6 +54,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9914783D21E87CC90013BEEF /* xIndex */ = {
+			isa = PBXGroup;
+			children = (
+				9914783E21E87CE50013BEEF /* M6XIndexScrollObserver.h */,
+				9914783F21E87CE50013BEEF /* M6XIndexScrollObserver.m */,
+			);
+			name = xIndex;
+			path = Src/xIndex;
+			sourceTree = "<group>";
+		};
+		9914784821E893EC0013BEEF /* risePercent */ = {
+			isa = PBXGroup;
+			children = (
+				9914784921E893EC0013BEEF /* M6RisePercentScrollObserver.h */,
+				9914784A21E893EC0013BEEF /* M6RisePercentScrollObserver.m */,
+			);
+			name = risePercent;
+			path = Src/risePercent;
+			sourceTree = "<group>";
+		};
 		995E509A21E727A200C3DB28 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +100,8 @@
 				995E50CD21E7306C00C3DB28 /* _temp */,
 				995E50C021E7289A00C3DB28 /* offset */,
 				995E50C421E728E200C3DB28 /* yProgress */,
+				9914784821E893EC0013BEEF /* risePercent */,
+				9914783D21E87CC90013BEEF /* xIndex */,
 				995E50AC21E727A200C3DB28 /* Main.storyboard */,
 				995E50AF21E727A400C3DB28 /* Assets.xcassets */,
 				995E50B121E727A400C3DB28 /* LaunchScreen.storyboard */,
@@ -191,7 +219,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9914784B21E893EC0013BEEF /* M6RisePercentScrollObserver.m in Sources */,
 				995E50C321E7289A00C3DB28 /* M6OffsetScrollObserver.m in Sources */,
+				9914784021E87CE50013BEEF /* M6XIndexScrollObserver.m in Sources */,
 				995E50AB21E727A200C3DB28 /* ViewController.m in Sources */,
 				995E50D121E7307D00C3DB28 /* M4TempListGenerator.m in Sources */,
 				995E50B621E727A400C3DB28 /* main.m in Sources */,
