@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9910A9AB21F5EFE100A12AE2 /* M6ProgressColorTabHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910A9AA21F5EFE100A12AE2 /* M6ProgressColorTabHelper.m */; };
+		9910A9B421F5F79900A12AE2 /* M6IndicatorCenterTabHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910A9B321F5F79900A12AE2 /* M6IndicatorCenterTabHelper.m */; };
 		9914784021E87CE50013BEEF /* M6XIndexScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9914783F21E87CE50013BEEF /* M6XIndexScrollObserver.m */; };
 		9914784B21E893EC0013BEEF /* M6RisePercentScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9914784A21E893EC0013BEEF /* M6RisePercentScrollObserver.m */; };
+		9945FD0D21F1AF63008A9325 /* M6XFromToIndexScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9945FD0C21F1AF63008A9325 /* M6XFromToIndexScrollObserver.m */; };
 		995E50A821E727A200C3DB28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E50A721E727A200C3DB28 /* AppDelegate.m */; };
 		995E50AB21E727A200C3DB28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E50AA21E727A200C3DB28 /* ViewController.m */; };
 		995E50AE21E727A200C3DB28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 995E50AC21E727A200C3DB28 /* Main.storyboard */; };
@@ -21,10 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9910A9A921F5EFE100A12AE2 /* M6ProgressColorTabHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M6ProgressColorTabHelper.h; sourceTree = "<group>"; };
+		9910A9AA21F5EFE100A12AE2 /* M6ProgressColorTabHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M6ProgressColorTabHelper.m; sourceTree = "<group>"; };
+		9910A9B221F5F79900A12AE2 /* M6IndicatorCenterTabHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M6IndicatorCenterTabHelper.h; sourceTree = "<group>"; };
+		9910A9B321F5F79900A12AE2 /* M6IndicatorCenterTabHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M6IndicatorCenterTabHelper.m; sourceTree = "<group>"; };
 		9914783E21E87CE50013BEEF /* M6XIndexScrollObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M6XIndexScrollObserver.h; sourceTree = "<group>"; };
 		9914783F21E87CE50013BEEF /* M6XIndexScrollObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M6XIndexScrollObserver.m; sourceTree = "<group>"; };
 		9914784921E893EC0013BEEF /* M6RisePercentScrollObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M6RisePercentScrollObserver.h; sourceTree = "<group>"; };
 		9914784A21E893EC0013BEEF /* M6RisePercentScrollObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M6RisePercentScrollObserver.m; sourceTree = "<group>"; };
+		9945FD0B21F1AF63008A9325 /* M6XFromToIndexScrollObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M6XFromToIndexScrollObserver.h; sourceTree = "<group>"; };
+		9945FD0C21F1AF63008A9325 /* M6XFromToIndexScrollObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M6XFromToIndexScrollObserver.m; sourceTree = "<group>"; };
 		995E50A321E727A200C3DB28 /* M6ScrollObserver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M6ScrollObserver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		995E50A621E727A200C3DB28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		995E50A721E727A200C3DB28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +63,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9910A9A621F5EF8700A12AE2 /* tabHelper */ = {
+			isa = PBXGroup;
+			children = (
+				9910A9A821F5EFD700A12AE2 /* progressColor */,
+				9910A9B121F5F77E00A12AE2 /* indicatorCenter */,
+			);
+			name = tabHelper;
+			path = Src/tabHelper;
+			sourceTree = "<group>";
+		};
+		9910A9A821F5EFD700A12AE2 /* progressColor */ = {
+			isa = PBXGroup;
+			children = (
+				9910A9A921F5EFE100A12AE2 /* M6ProgressColorTabHelper.h */,
+				9910A9AA21F5EFE100A12AE2 /* M6ProgressColorTabHelper.m */,
+			);
+			path = progressColor;
+			sourceTree = "<group>";
+		};
+		9910A9B121F5F77E00A12AE2 /* indicatorCenter */ = {
+			isa = PBXGroup;
+			children = (
+				9910A9B221F5F79900A12AE2 /* M6IndicatorCenterTabHelper.h */,
+				9910A9B321F5F79900A12AE2 /* M6IndicatorCenterTabHelper.m */,
+			);
+			path = indicatorCenter;
+			sourceTree = "<group>";
+		};
 		9914783D21E87CC90013BEEF /* xIndex */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +109,16 @@
 			);
 			name = risePercent;
 			path = Src/risePercent;
+			sourceTree = "<group>";
+		};
+		9945FD0A21F1AF3F008A9325 /* xFromToIndex */ = {
+			isa = PBXGroup;
+			children = (
+				9945FD0B21F1AF63008A9325 /* M6XFromToIndexScrollObserver.h */,
+				9945FD0C21F1AF63008A9325 /* M6XFromToIndexScrollObserver.m */,
+			);
+			name = xFromToIndex;
+			path = Src/xFromToIndex;
 			sourceTree = "<group>";
 		};
 		995E509A21E727A200C3DB28 = {
@@ -102,6 +149,8 @@
 				995E50C421E728E200C3DB28 /* yProgress */,
 				9914784821E893EC0013BEEF /* risePercent */,
 				9914783D21E87CC90013BEEF /* xIndex */,
+				9945FD0A21F1AF3F008A9325 /* xFromToIndex */,
+				9910A9A621F5EF8700A12AE2 /* tabHelper */,
 				995E50AC21E727A200C3DB28 /* Main.storyboard */,
 				995E50AF21E727A400C3DB28 /* Assets.xcassets */,
 				995E50B121E727A400C3DB28 /* LaunchScreen.storyboard */,
@@ -220,10 +269,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9914784B21E893EC0013BEEF /* M6RisePercentScrollObserver.m in Sources */,
+				9910A9B421F5F79900A12AE2 /* M6IndicatorCenterTabHelper.m in Sources */,
 				995E50C321E7289A00C3DB28 /* M6OffsetScrollObserver.m in Sources */,
 				9914784021E87CE50013BEEF /* M6XIndexScrollObserver.m in Sources */,
 				995E50AB21E727A200C3DB28 /* ViewController.m in Sources */,
 				995E50D121E7307D00C3DB28 /* M4TempListGenerator.m in Sources */,
+				9910A9AB21F5EFE100A12AE2 /* M6ProgressColorTabHelper.m in Sources */,
+				9945FD0D21F1AF63008A9325 /* M6XFromToIndexScrollObserver.m in Sources */,
 				995E50B621E727A400C3DB28 /* main.m in Sources */,
 				995E50A821E727A200C3DB28 /* AppDelegate.m in Sources */,
 				995E50C721E728F900C3DB28 /* M6YProgressScrollObserver.m in Sources */,
