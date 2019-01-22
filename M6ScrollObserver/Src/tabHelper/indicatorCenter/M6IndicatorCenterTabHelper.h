@@ -6,12 +6,22 @@
 //  Copyright © 2019年 xyz.chenms. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface M6IndicatorCenterTabHelper : NSObject
+@class M6IndicatorInfo;
 
+@interface M6IndicatorCenterTabHelper : NSObject
+- (M6IndicatorInfo *)indicatorInfoWithSmallIndexProgress:(CGFloat)smallIndexProgress
+                                       smallIndexCenterX:(CGFloat)smallIndexCenterX
+                                         bigIndexCenterX:(CGFloat)bigIndexCenterX
+                                          indicatorWidth:(CGFloat)indicatorWidth;
+@end
+
+@interface M6IndicatorInfo : NSObject
+@property (nonatomic) CGFloat currentCenterX;
+@property (nonatomic) CGFloat currentExtraWidth;
 @end
 
 NS_ASSUME_NONNULL_END
