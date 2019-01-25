@@ -21,6 +21,7 @@
 		995E50C321E7289A00C3DB28 /* M6OffsetScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E50C221E7289A00C3DB28 /* M6OffsetScrollObserver.m */; };
 		995E50C721E728F900C3DB28 /* M6YProgressScrollObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E50C621E728F900C3DB28 /* M6YProgressScrollObserver.m */; };
 		995E50D121E7307D00C3DB28 /* M4TempListGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 995E50D021E7307D00C3DB28 /* M4TempListGenerator.m */; };
+		99772E0621FB11AF00AFB15A /* M6XIndexScrollHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 99772E0521FB11AF00AFB15A /* M6XIndexScrollHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		995E50C621E728F900C3DB28 /* M6YProgressScrollObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M6YProgressScrollObserver.m; sourceTree = "<group>"; };
 		995E50CF21E7307D00C3DB28 /* M4TempListGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M4TempListGenerator.h; sourceTree = "<group>"; };
 		995E50D021E7307D00C3DB28 /* M4TempListGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M4TempListGenerator.m; sourceTree = "<group>"; };
+		99772E0421FB11AF00AFB15A /* M6XIndexScrollHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M6XIndexScrollHelper.h; sourceTree = "<group>"; };
+		99772E0521FB11AF00AFB15A /* M6XIndexScrollHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M6XIndexScrollHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 			children = (
 				9914783E21E87CE50013BEEF /* M6XIndexScrollObserver.h */,
 				9914783F21E87CE50013BEEF /* M6XIndexScrollObserver.m */,
+				99772E0421FB11AF00AFB15A /* M6XIndexScrollHelper.h */,
+				99772E0521FB11AF00AFB15A /* M6XIndexScrollHelper.m */,
 			);
 			name = xIndex;
 			path = Src/xIndex;
@@ -279,6 +284,7 @@
 				995E50B621E727A400C3DB28 /* main.m in Sources */,
 				995E50A821E727A200C3DB28 /* AppDelegate.m in Sources */,
 				995E50C721E728F900C3DB28 /* M6YProgressScrollObserver.m in Sources */,
+				99772E0621FB11AF00AFB15A /* M6XIndexScrollHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
